@@ -96,4 +96,31 @@
             android:id="@+id/react"
             android:layout_margin="5dp"/>
 </LinearLayout>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:id="@+id/rb"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"/>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="40"
+        android:id="@+id/sb"
+        android:layout_margin="10dp"/>
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb"
+        android:textOn="OnState"
+        android:textOff="OffSate"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:id="@+id/ibm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_photo_camera_24" />
 </LinearLayout>
