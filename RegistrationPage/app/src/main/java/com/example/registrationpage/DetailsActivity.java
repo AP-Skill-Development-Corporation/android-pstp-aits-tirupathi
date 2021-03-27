@@ -23,6 +23,7 @@ ActivityDetailsBinding detailsBinding;
        String m= i.getStringExtra("mymobile");
        String g= i.getStringExtra("mygender");
       String a=  i.getStringExtra("myaddress");
+      String r=i.getStringExtra("myrating");
       detailsBinding.tvDetails.append("name:"+n+"\n"+
               "Password:"+p+"\n"+
               "email:"+e+"\n"+
