@@ -62,6 +62,8 @@ String gender,knowNCourses,userRating,userProgress;
     }
 
     public void showData(View view) {
+        String s=binding.spin.getSelectedItem().toString();
+
         /*MainAcivity.this
         * or
         * this
@@ -89,6 +91,7 @@ String gender,knowNCourses,userRating,userProgress;
         intentObj.putExtra("mypassword",password);
         intentObj.putExtra("myaddress",address);
         intentObj.putExtra("mygender",gender);
+        intentObj.putExtra("mybranch",s);
         startActivity(intentObj);
     }
 }

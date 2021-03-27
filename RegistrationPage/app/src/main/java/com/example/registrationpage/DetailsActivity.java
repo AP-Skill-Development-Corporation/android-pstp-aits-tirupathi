@@ -23,12 +23,13 @@ ActivityDetailsBinding detailsBinding;
        String m= i.getStringExtra("mymobile");
        String g= i.getStringExtra("mygender");
       String a=  i.getStringExtra("myaddress");
-      String r=i.getStringExtra("myrating");
+      String s=i.getStringExtra("mybranch");
       detailsBinding.tvDetails.append("name:"+n+"\n"+
               "Password:"+p+"\n"+
               "email:"+e+"\n"+
               "Mobile:"+m+"\n"+
               "Gender:"+g+"\n"+
-              "Address:"+a+"\n");
+              "Address:"+a+"\n"+
+              "Branch:"+s);
     }
 }
