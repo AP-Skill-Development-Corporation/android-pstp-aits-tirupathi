@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidMenus</string>
+    <string-array name="hero_names">
+        <item>Gandi Ji</item>
+        <item>Swami Vivekandha</item>
+        <item>Chagantikotiswarao</item>
+        <item>Narasmiharao</item>
+    </string-array>
+</resources>
