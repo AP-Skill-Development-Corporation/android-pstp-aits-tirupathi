@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyRecyclerView</string>
+<string-array name="titles">
+    <item>Ali</item>
+    <item>Bhavani</item>
+    <item>Charisma</item>
+    <item>Esawar</item>
+    <item>FulakNama</item>
+    <item>Giri</item>
+    <item>Harsha</item>
+    <item>Indhu</item>
+
+</string-array>
+    <string-array name="subtitle">
+        <item>R.Kodur</item>
+        <item>Nandyal</item>
+        <item>Tirupathi</item>
+        <item>Himalayas</item>
+        <item>Hyd</item>
+        <item>Tpt</item>
+        <item>Rajampets</item>
+        <item>kalikiri</item>
+    </string-array>
+</resources>
