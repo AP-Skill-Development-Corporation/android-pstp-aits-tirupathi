@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Covid19 Daily Reports"
+       android:textSize="30sp"
+       android:gravity="center"
+       android:textColor="@color/colorAccent"/>
+    <TextView
+        android:text="Date"
+        android:gravity="center"
+        style="@style/textview_attributs"
+        android:id="@+id/date_tv"
+        android:textColor="#000"
+      />
+    <TextView
+        style="@style/textview_attributs"
+        android:text="Country"
+        android:id="@+id/tv_country"
+        android:textColor="#00BCD4"
+    />
+    <TextView
+        style="@style/textview_attributs"
+        android:text="Confiremed"
+        android:id="@+id/tv_confiremed"
+        android:textColor="#FF5722"
+        />
+    <TextView
+        style="@style/textview_attributs"
+        android:text="Active"
+        android:id="@+id/tv_active"
+        android:textColor="#E91E63"
+        />
+    <TextView
+        style="@style/textview_attributs"
+        android:text="Recovered"
+        android:id="@+id/tv_recovered"
+        android:textColor="#E91E63"
+        />
+    <TextView
+        style="@style/textview_attributs"
+        android:text="Deathes"
+        android:id="@+id/tv_deaths"
+        android:textColor="#FFC107"
+        />
+</LinearLayout>
