@@ -71,6 +71,8 @@ RecyclerDateAdapter dateAdapter;
                 @Override
                 public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
                  dialog.dismiss();
+                    Toast.makeText(MainActivity.this, "Total Days : "+
+                            response.body().size(), Toast.LENGTH_SHORT).show();
                  dateAdapter=new RecyclerDateAdapter(getApplicationContext(),response.body());
                  rv.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
                  rv.setAdapter(dateAdapter);
