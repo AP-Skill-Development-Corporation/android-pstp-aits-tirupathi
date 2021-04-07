@@ -6,5 +6,6 @@ import retrofit2.http.GET;
 public interface EndpointInterface
 {
     @GET("dayone/country/IN")
-    Call<String> getData();
+ //   Call<String> getData();
+    Call<ResponseDate> getData();
 }

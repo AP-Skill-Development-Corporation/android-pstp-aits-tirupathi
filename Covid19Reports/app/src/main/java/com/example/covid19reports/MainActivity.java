@@ -25,7 +25,7 @@ TextView country,date,active,recovered,deaths,confiremed;
         confiremed=findViewById(R.id.tv_confiremed);
         EndpointInterface ei=Covid19Responds.getInstance()
                                             .create(EndpointInterface.class);
-        Call<String> c=ei.getData();
+        /*Call<String> c=ei.getData();
         c.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
@@ -37,6 +37,6 @@ TextView country,date,active,recovered,deaths,confiremed;
                 Toast.makeText(MainActivity.this, "something went wrong while fetch data", Toast.LENGTH_SHORT).show();
             }
         });
-
+*/
     }
 }
