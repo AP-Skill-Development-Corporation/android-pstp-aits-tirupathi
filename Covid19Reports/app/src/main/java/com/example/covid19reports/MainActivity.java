@@ -1,6 +1,7 @@
 package com.example.covid19reports;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,17 +13,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    MyAdapter adapter;
 TextView country,date,active,recovered,deaths,confiremed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        country=findViewById(R.id.tv_country);
+        recyclerView=findViewById(R.id.rec);
+        /*country=findViewById(R.id.tv_country);
         date=findViewById(R.id.date_tv);
         active=findViewById(R.id.tv_active);
         recovered=findViewById(R.id.tv_recovered);
         deaths=findViewById(R.id.tv_deaths);
-        confiremed=findViewById(R.id.tv_confiremed);
+        confiremed=findViewById(R.id.tv_confiremed);*/
         EndpointInterface ei=Covid19Responds.getInstance()
                                             .create(EndpointInterface.class);
         /*Call<String> c=ei.getData();
