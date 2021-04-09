@@ -74,7 +74,10 @@ RecyclerDateAdapter dateAdapter;
                     Toast.makeText(MainActivity.this, "Total Days : "+
                             response.body().size(), Toast.LENGTH_SHORT).show();
                  dateAdapter=new RecyclerDateAdapter(getApplicationContext(),response.body());
-                 rv.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+                 LinearLayoutManager lm=new LinearLayoutManager(getApplicationContext());
+                 lm.setReverseLayout(true);
+                 lm.setStackFromEnd(true);
+                 rv.setLayoutManager(lm);
                  rv.setAdapter(dateAdapter);
                 }
 
@@ -87,12 +90,7 @@ RecyclerDateAdapter dateAdapter;
         }
 
     }
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "back", Toast.LENGTH_SHORT).show();
-        super.onBackPressed();
 
-    }
     private String properDateFormat(String resDate) {
         String inputPattern = "yy-mm-dd";
         String outputPattern = "dd-mm-yy";

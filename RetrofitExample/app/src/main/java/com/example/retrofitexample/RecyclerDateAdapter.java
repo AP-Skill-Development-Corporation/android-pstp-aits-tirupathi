@@ -40,27 +40,23 @@ public class RecyclerDateAdapter extends
         holder.date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            String act=String.valueOf(list.get(position).getActive());
+            String date=String.valueOf(list.get(position).getDate());
+            String rec=String.valueOf(list.get(position).getRecovered());
+            String country=String.valueOf(list.get(position).getCountry());
+            String cnf=String.valueOf(list.get(position).getConfirmed());
+            String deaths=String.valueOf(list.get(position).getDeaths());
+            Intent i=new Intent(ctx,DetailsActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.putExtra("a",act);
+            i.putExtra("d",date);
+            i.putExtra("r",rec);
+            i.putExtra("c",country);
+            i.putExtra("cn",cnf);
+            i.putExtra("dt",deaths);
+            ctx.startActivity(i);
 
-            String act= String.valueOf(list.get(position).getActive());
-            String recovr= String.valueOf(list.get(position).getRecovered());
-            String cnf= String.valueOf(list.get(position).getConfirmed());
-            String countr= String.valueOf(list.get(position).getCountry());
-            String deat= String.valueOf(list.get(position).getDeaths());
-            String date= String.valueOf(list.get(position).getDate());
-                /*Toast.makeText(ctx, "you clicked"+
-                        holder.date.getText().toString(), Toast.LENGTH_SHORT).show();*/
-                Toast.makeText(ctx, "active"+
-                        act+"\n"+"Recover:"+recovr, Toast.LENGTH_SHORT).show();
-               Intent intent=new Intent(ctx,DetailsActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-               intent.putExtra("a",act);
-                intent.putExtra("re",recovr);
-                intent.putExtra("cn",cnf);
-                intent.putExtra("cou",countr);
-                intent.putExtra("de",deat);
-                intent.putExtra("da",properDateFormat(date));
 
-                ctx.startActivity(intent);
 
             }
         });
