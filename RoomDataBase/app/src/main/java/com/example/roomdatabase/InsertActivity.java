@@ -82,7 +82,7 @@ public class InsertActivity extends AppCompatActivity {
         student.setGender(gender);
         student.setLanguage(sb.toString());
         student.setDepartment(department);
-
+/*without live data*/
         //MainActivity.dataBase.myDao().insertStudent(student);
 
         MainActivity.viewModel.insert(student);
