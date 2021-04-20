@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     public void login(View view) {
         String useremail = et_login_email.getText().toString();
         String password = et_login_pass.getText().toString();
-        mAuth.signInWithEmailAndPassword(useremail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(useremail,password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
