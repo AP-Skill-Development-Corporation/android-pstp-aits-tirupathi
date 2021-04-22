@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Spinner</string>
+    <string-array name="items_class">
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+    </string-array>
+
+    <string-array name="items_div_class_1">
+        <item>Div 1-A</item>
+        <item>Div 1-B</item>
+        <item>Div 1-C</item>
+        <item>Div 1-D</item>
+    </string-array>
+
+    <string-array name="items_div_class_2">
+        <item>Div 2-A</item>
+        <item>Div 2-B</item>
+        <item>Div 2-C</item>
+        <item>Div 2-D</item>
+    </string-array>
+
+    <string-array name="items_div_class_3">
+        <item>Div 3-A</item>
+        <item>Div 3-B</item>
+        <item>Div 3-C</item>
+        <item>Div 3-D</item>
+    </string-array>
+
+    <string-array name="items_div_class_4">
+        <item>Div 4-A</item>
+        <item>Div 4-B</item>
+        <item>Div 4-C</item>
+        <item>Div 4-D</item>
+    </string-array>
+
+</resources>
