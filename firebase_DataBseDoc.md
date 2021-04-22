@@ -1,167 +1,127 @@
-# Android Images and ClickableImages 
+# Firebase Realtime Database
+## What is Firebase Database ?
+The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client. When you build cross-platform apps with our iOS, Android, and JavaScript SDKs, all of your clients share one Realtime Database instance and automatically receive updates with the newest data.
 
-* For an Android app, user interaction typically involves tapping, typing, using gestures, or talking. The Android framework provides corresponding user interface (UI) elements such as buttons, clickable images, menus, keyboards, text entry fields, and a microphone.
+![picture alt](https://github.com/chaitanyak963/Documentation/raw/master/images/fb.png)
 
-* When designing an interactive app, make sure your app is intuitive; that is, your app should perform as your users expect it to perform. For example, when you rent a car, you expect the steering wheel, gear shift, headlights, and indicators to be in a certain place. Another example is that when you first enter a room, you expect the light switch to be in a certain place. Similarly, when a user starts an app, the user expects buttons and images to be clickable. Don't violate established expectations, or you'll make it harder for your users to use your app.
+## Why is Firebase Database ?
+#### Realtime 
+The data stored in the Firebase Realtime Database will be reflected at realtime i.e. if there is a change in the values in the database then that change will be reflected back to all the users at that instant only and no dealy will be there.
 
-* Note: Android users expect UI elements to act in certain ways, so it's important that your app be consistent with other Android apps. To satisfy your users, create a layout that gives users predictable choices.
+#### Large Accessibility 
+The Firebase Realtime Database can be accessed from various platforms like Android, iOS, Web. So, you need not write the same code for different platforms a number of times.
 
-#### Designing buttons
+#### Offline Mode 
+This is the best advantage of using Firebase Realtime Database. If you are not connected with the internet and you changed something on your application then that change will be reflected in your application at that time only but on the Firebase Database, the change will be updated once you are online i.e. your device is connected to the internet. So, even if there is no internet, the user feels like using the services the same as done when there is the internet.
 
-* People like to press buttons. Show someone a big red button with a message that says "Do not press" and the person will probably press the button, just for the pleasure of pressing a big red button. (That the button is forbidden is also a factor.)
+#### No Application Server 
+There is no need for application server here because the data is directly accessed from the mobile device.
+Control access to data: By default, no one is allowed to change the data in the Firebase Realtime Database but you can control the access of data i.e. you can set which user can access the data.
 
-* You use the Button class to make a button for an Android app. Buttons can have the following design:
+## How is Firebase Database ?
+#### Step 1 - Connect your App to Firebase 
+If you haven't already, add Firebase to your Android project.
+Then by clicking on the tools in you android studio and connect the firebase by clicking on connect to firebase from the Firebase Assistant
 
-  * Text only, as shown on the left side of the figure below.
-  * Icon only, as shown in the center of the figure below.
-  * Both text and an icon, as shown on the right side of the figure below
-  <img src="https://github.com/Muneiahtellakula/android_development/blob/master/btn.png?raw=true">
-* When the user touches or clicks a button, the button performs an action. The button's text or icon should provide a hint about what that action will be. (Buttons are sometimes called "push-buttons" in Android documentation.)
+#### Step 2 - Create a Database 
+* If you haven't already, create a Firebase project: In the Firebase console, click Add project, then follow the on-screen instructions to create a Firebase project or to add Firebase services to an existing GCP project.
 
-* A button is usually a rectangle or rounded rectangle with a descriptive caption or icon in its center. Android Button elements follow the guidelines in the Android Material Design specification. (You learn more about Material Design in another lesson.)
+* Navigate to the Database section of the Firebase console. You'll be prompted to select an existing Firebase project. Follow the database creation workflow.
 
-* Android offers several types of Button elements, including raised buttons and flat buttons as shown in the figure below. Each button has three states: normal, disabled, and pressed.
+* Select a starting mode for your Firebase Security Rules:
 
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/btn_apper.png?raw=true">
+###### Test mode
+Good for getting started with the mobile and web client libraries, but allows anyone to read and overwrite your data. After testing, make sure to review the Understand Firebase Realtime Database Rules section.
 
-**In the figure above:**
+To get started with the web, iOS, or Android SDK, select test mode.
 
-  1. Raised button in three states: normal, disabled, and pressed
-  2. Flat button in three states: normal, disabled, and pressed
+###### Locked mode
+Denies all reads and writes from mobile and web clients. Your authenticated application servers can still access your database.
 
-**Creating a raised button with an icon and text**
+* Click Done.
 
-* While a Button usually displays text that tells the user what the action is, a raised Button can also display an icon along with text.
-
-
-**Choosing an icon**
-
-**To choose images of a standard icon that are resized for different displays, follow these steps:**
-
-  1. Expand app > res in the Project > Android pane, and right-click (or Command-click) the drawable folder.
-  2. Choose New > Image Asset. The Configure Image Asset dialog appears.
-  
-   <img src="https://github.com/Muneiahtellakula/android_development/blob/master/as_configure_image_asset_01.png?raw=true" height=400 width=600>
-  
-  3. Choose Action Bar and Tab Icons in the drop-down menu. (For a complete description of this dialog, see Create app icons with Image Asset Studio.)
-  4. Click the Clipart: image (the Android logo) to select a clip art image as the icon. A page of icons appears as shown below. Click the icon you want to use.
-      
-      <img src="https://github.com/Muneiahtellakula/android_development/blob/master/as_configure_image_asset_02.png?raw=true" height=400 width=600>
-  5. Optional: Choose HOLO_DARK from the Theme drop-down menu to set the icon to be white against a dark-colored or black background.
-
-  6. Optional: Depending on the shape of the icon, you may want to add padding to the icon so that the icon doesn't crowd the text. Drag the Padding slider to the right to add more padding.
-  7. Click Next, and then click Finish in the Confirm Icon Path dialog. The icon name should now appear in the app > res > drawable folder.
-  
-   **Vector images of a standard icon are automatically resized for different sizes of device displays. To choose vector images, follow these steps:**
-
-  1. Expand app > res in the Project > Android pane, and right-click (or Command-click) the drawable folder.
-  2. Choose New > Vector Asset for an icon that automatically resizes itself for each display.
-  3. The Vector Asset Studio dialog appears for a vector asset. Click the Material Icon radio button, and then click the Choose button to choose an icon from the Material    Design specification. (For a complete description of this dialog, see Add Multi-Density Vector Graphics.)
-  4. Click Next after choosing an icon, and click Finish to finish. The icon name should now appear in the app > res > drawable folder.
-#### Sample example
-
-**Here,Screen 1 : have Android Icon symbol is ImageView and rightmark is ImageButton .when it initial  time shows the black color**
-
-**Screen 2 : when click the ImageButton and Imageview It will change the Green color.If you click both then it shown like colors Screen 3**
-
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/img_btn_normal.PNG?raw=true">
-
-
-
-#### Project Directory files information following 
-
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/pjtFiles.PNG?raw=true">
-
-**acivity_main.xml**
+#### Add the Realtime Database SDK to your app 
+Add the dependency for the Realtime Database Android library to your module (app-level) Gradle file (usually app/build.gradle):
+```gradle
+implementation 'com.google.firebase:firebase-database:19.3.1'
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="top"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:id="@+id/image"
-        android:src="@drawable/ic_android_black_24dp"
-       />
-    <ImageButton
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:id="@+id/img_btn"
-        android:layout_gravity="center"
-        android:background="#fff"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_check_black_24dp"
-        />
-
-</LinearLayout>
+#### Write to your database 
+* Retrieve an instance of your database using getInstance() and reference the location you want to write to.
+```java
+DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Database");
+//To push/write data into database.
+reference.setValue("Welcome to Android World");
 ```
-**button_actions.xml** new drawable resource file
-```
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/ic_android_green_24dp"
-        android:state_pressed="true" />
-    <item android:drawable="@drawable/ic_android_blue_24dp"
-        android:state_window_focused="true" />
-    <item android:drawable="@drawable/ic_android_black_24dp" />
-</selector>
 
-```
-**MainActivity.java**
-
-```
-package com.muneiah.imagebuttons;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-public class MainActivity extends AppCompatActivity
-{
-ImageView iv;
-ImageButton ib;
+#### Read from your database 
+* To make your app data update in realtime, you should add a ValueEventListener to the reference you just created.
+* The onDataChange() method in this class is triggered once when the listener is attached and again every time the data changes, including the children.
+```java
+reference.addValueEventListener(new ValueEventListener() {
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        iv=findViewById(R.id.image);
-        ib=findViewById(R.id.img_btn);
-
-        /*Imageview Clickable Event Handling */
-        iv.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-            iv.setImageResource(R.drawable.button_actions);
-                Toast.makeText(MainActivity.this, "Hello, I'm ImageView", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        /*ImageButton  Clickable Event Handling */
-        ib.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ib.setImageResource(R.drawable.button_actions);
-                Toast.makeText(MainActivity.this, "You clicked Image Button", Toast.LENGTH_SHORT).show();
-            }
-        });
-
+    public void onDataChange(DataSnapshot dataSnapshot) {
+        // This method is called once with the initial value and again
+        // whenever data at this location is updated.
+        String value = dataSnapshot.getValue(String.class);
+        Toast.maketext(this,"Value is: "+value,Length.short()).show();
+        Log.d(TAG, "Value is: " + value);
     }
-}
 
+    @Override
+    public void onCancelled(DatabaseError error) {
+        // Failed to read value
+        Log.w(TAG, "Failed to read value.", error.toException());
+    }
+});
 ```
+#### Update single data into your database 
+* To update any single value in the database we will use updateChildren().
+```java
+        HashMap<String,Object> map = new HashMap<>();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        Query query = ref.child("Database").orderByChild("roll").equalTo(roll);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    map.put("name","apssdc");
+                    dataSnapshot.getRef().updateChildren(map);
+                    Toast.makeText(MainActivity.this, "Data Updated", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+```
+#### Delete single data from database 
+* To delete any single value from the database we will use removeValue()
+```java
+reference.child("123").removeValue();
+```
+
+## Related Practical
+
+* Create a new project as shown in the below screen.
+
+<img src ="https://github.com/chaitanyak963/Documentation/raw/master/images/screen1.png" width="600" height="300"/>
+
+* Select an empty activity to work from the root of the project.
+
+<img src ="https://github.com/chaitanyak963/Documentation/raw/master/images/screen2.png" width="600" height="300"/>
+
+* Application name is given as ExampleDatabase and without doing any more changes just click on finish.
+
+<img src ="https://github.com/chaitanyak963/Documentation/raw/master/images/screen3.png" width="600" height="300"/>
+
+
+
+## Output Screens 
+
+![picture alt](https://github.com/chaitanyak963/Documentation/raw/master/images/img.png)
+
+![picture alt](https://github.com/chaitanyak963/Documentation/raw/master/images/img2.png)
+
+![picture alt](https://github.com/chaitanyak963/Documentation/raw/master/images/imgdb.png)
