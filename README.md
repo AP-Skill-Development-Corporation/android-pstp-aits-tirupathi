@@ -7,4 +7,5 @@
 *  [For Retrofit Document please click here] https://github.com/AP-Skill-Development-Corporation/AAD-STP-BATCH-27/blob/main/retrofit_documentation.md 
 *  
 *  GOOGLE BOOKS API https://www.googleapis.com/books/v1/volumes?q=twostates
+*  Android Realtime Database FIrebase integration Document https://docs.google.com/presentation/d/10PumAa2_Z_5ej6PYYhnjUv3j1vGJ-zpNjNWLMcc8jtM/edit?usp=sharing
 
