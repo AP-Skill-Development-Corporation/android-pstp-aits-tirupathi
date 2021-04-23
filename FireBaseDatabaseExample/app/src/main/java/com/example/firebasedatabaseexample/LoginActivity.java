@@ -1,5 +1,6 @@
 package com.example.firebasedatabaseexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,23 +38,52 @@ public class LoginActivity extends AppCompatActivity {
     public void loginEvent(View view) {
         String ename = e_name.getText().toString();
         String eid = e_id.getText().toString();
+        list = new ArrayList<>();
+        if (ename.isEmpty()&& eid.isEmpty()){
+            Toast.makeText(this, "Fill the details", Toast.LENGTH_SHORT).show();
+        }else{
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                list = new ArrayList<>();
-                for (int i = 0; i < list.size(); i++) {
-
-                    if (ename.equals(list.get(i).getEname())) {
-                        Log.i("Login",list.get(i).getEname());
-                        Toast.makeText(LoginActivity.this, "welcome..", Toast.LENGTH_SHORT).show();
+                for (DataSnapshot ds:snapshot.getChildren()){
+                    Employee emp=ds.getValue(Employee.class);
+                    if ((ename.equals(emp.getEname())) && (eid.equals(emp.geteId()))){
+                        Intent successintent=new Intent(getApplicationContext(),
+                                LoginSuccessActivity.class);
+                        startActivity(successintent);
+                    }
+                    else {
+                        Toast.makeText(LoginActivity.this, "not found",
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(LoginActivity.this, "error", Toast.LENGTH_SHORT).show();
+            }
+        });                /*reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+
+                    Employee employee=dataSnapshot.getValue(Employee.class);
+                    if ((ename.equals(employee.getEname()))&& (eid.equals(employee.geteId()))){
+                        Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                        break;
+                    }else {
+                        Toast.makeText(LoginActivity.this, "faild", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
+    }
     }
 }

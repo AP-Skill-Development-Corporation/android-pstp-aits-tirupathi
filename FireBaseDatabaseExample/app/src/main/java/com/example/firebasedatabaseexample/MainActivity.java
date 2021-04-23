@@ -28,7 +28,7 @@ FirebaseDatabase database;
 DatabaseReference reference;
 RecyclerView recycle;
 EmployeeAdapter adapter;
-    Employee employee;
+    Employee employeee;
     List<Employee> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +50,8 @@ EmployeeAdapter adapter;
         if (ename.isEmpty() && eid.isEmpty() && esalary.isEmpty()){
             Toast.makeText(this, "please fill the details", Toast.LENGTH_SHORT).show();
         }else {
-             employee=new Employee(ename,eid,esalary);
-            reference.child(ename).push().setValue(employee)
+             employeee=new Employee(ename,eid,esalary);
+            reference.push().setValue(employeee)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
@@ -59,22 +59,28 @@ EmployeeAdapter adapter;
                     employeeId.setText("");
                     empSal.setText("");
                     Toast.makeText(MainActivity.this, "saved success"+ename, Toast.LENGTH_SHORT).show();
-                    /*Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
-                    startActivity(intent);*/
+                    Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                    startActivity(intent);
                 }
             });
         }
     }
 
     public void retriveDatatoFirebase(View view) {
-        reference.addValueEventListener(new ValueEventListener() {
+        list=new ArrayList<>();
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-              list=new ArrayList<>();
-              list.add(employee);
-              adapter=new EmployeeAdapter(getApplication(),list);
-              recycle.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-              recycle.setAdapter(adapter);
+                for (DataSnapshot ds:snapshot.getChildren()){
+                    Employee emp=ds.getValue(Employee.class);
+                    list.add(emp);
+                }
+
+                adapter = new EmployeeAdapter(getApplicationContext(), list);
+                recycle.setAdapter(adapter);
+                recycle.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                Toast.makeText(MainActivity.this, "" + list.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

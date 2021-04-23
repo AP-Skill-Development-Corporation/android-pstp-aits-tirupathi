@@ -5,6 +5,9 @@ public class Employee {
     String eId;
     String eSalary;
 
+    public Employee() {
+    }
+
     public Employee(String ename, String eId, String eSalary) {
         this.ename = ename;
         this.eId = eId;
@@ -19,7 +22,7 @@ public class Employee {
         this.ename = ename;
     }
 
-    public String geteId() {
+        public String geteId() {
         return eId;
     }
 
