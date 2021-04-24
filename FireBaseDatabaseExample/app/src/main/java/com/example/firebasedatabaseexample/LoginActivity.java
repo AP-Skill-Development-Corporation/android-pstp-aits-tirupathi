@@ -51,10 +51,12 @@ public class LoginActivity extends AppCompatActivity {
                         Intent successintent=new Intent(getApplicationContext(),
                                 LoginSuccessActivity.class);
                         startActivity(successintent);
+                        break;
                     }
                     else {
                         Toast.makeText(LoginActivity.this, "not found",
                                 Toast.LENGTH_SHORT).show();
+                        break;
                     }
                 }
             }
