@@ -1,55 +1,49 @@
 package com.example.firebasecurd;
 class User {
-    private String name,mobileno,email,username,password;
+    private String name;
+    private String mobile;
+    private String email;
+    private String filepath;
 
     public User() {
     }
 
-    public User(String name, String mobileno, String email, String username, String password) {
+    public User(String name, String mobile, String email, String filepath) {
         this.name = name;
-        this.mobileno = mobileno;
+        this.mobile = mobile;
         this.email = email;
-        this.username = username;
-        this.password = password;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setMobileno(String mobileno) {
-        this.mobileno = mobileno;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        this.filepath = filepath;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getMobileno() {
-        return mobileno;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getUsername() {
-        return username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getFilepath() {
+        return filepath;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 }

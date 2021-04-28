@@ -4,59 +4,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your name"
-        android:inputType="textCapWords"
         android:id="@+id/name"
+        android:inputType="textCapWords"
+        android:hint="Enter your name"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter mobile no"
-        android:inputType="phone"
-        android:id="@+id/mobileno"
-        />
+        android:id="@+id/mobile"
+        android:hint="Enter Mobile number"
+        android:inputType="phone"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter emailid"
-        android:inputType="textEmailAddress"
         android:id="@+id/email"
-        />
-    <EditText
+        android:hint="Enter Email Id"
+        android:inputType="textEmailAddress"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter username"
-        android:id="@+id/username"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="**************"
-        android:inputType="textPassword"
-        android:id="@+id/password"
-        />
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/pic"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/camera"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                />
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/gallary"
+                android:layout_marginTop="10dp"
+                android:id="@+id/g"/>
+        </LinearLayout>
+
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="save"
-        android:id="@+id/savebutton"
-        />
+        android:text="Submit"
+        android:textStyle="bold"
+        android:id="@+id/submit"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="update"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="data"
-        android:id="@+id/datatextview"
-        android:textSize="20dp"
-        />
+        android:id="@+id/view"
+        android:text="View Data"
+        android:textStyle="bold"/>
 
 </LinearLayout>

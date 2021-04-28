@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GoogleSignInActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/auth_email_id"
+        android:hint="Enter Email Id"
+        android:background="@drawable/whiteboarder"
+        android:inputType="textEmailAddress"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        android:textColor="#000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/password"
+        android:hint="**************"
+        android:background="@drawable/orange"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sin Up"
+        android:background="@drawable/orange"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:id="@+id/register"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <!--<com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            />-->
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/sign_btn"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/g_siginin"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/facebook_btn"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/f"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/twitter_btn"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/twitter"/>
+    </LinearLayout>
+</LinearLayout>

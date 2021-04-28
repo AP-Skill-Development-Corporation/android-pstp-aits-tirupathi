@@ -6,20 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UpdateandDeleteActivity">
+    tools:context=".DetailsActivity">
 
-    <EditText
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter username"
-        android:id="@+id/u"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="get"
-        android:onClick="get"
-
-        />
+        android:id="@+id/recycle"/>
 
 </LinearLayout>

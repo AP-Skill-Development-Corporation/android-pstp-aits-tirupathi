@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
     String APIKEY = "Paste your API KEY Here";
 
     Checkout checkout;
-
+/*this is the muneiah's modifications from android studio*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
