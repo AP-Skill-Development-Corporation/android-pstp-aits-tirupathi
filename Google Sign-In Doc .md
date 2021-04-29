@@ -26,11 +26,19 @@
 
 * project name My Project
 <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(43).png">
-*next,Configure your OAuth Client (Just fill the any refarence name) .here **mygooglesign** were giving 
+* next,Configure your OAuth Client (Just fill the any refarence name) .here **mygooglesign** were giving 
 <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(44).png">
  
-<img src="">
-* * <img src="">
-* * <img src="">         
+<img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(45).png">
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(46).png">
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(47).png ">      
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(48).png">  
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(49).png">  
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(50).png"> 
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(51).png"> 
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(52).png"> 
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(53).png"> 
+* <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(54).png">  
+
     
       
