@@ -285,4 +285,5 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     }
 }
 ```
-* At Drawable file added glogo.png file 
+* At Drawable file added glogo.png file 👉--> https://github.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/blob/master/g-sign%20images/glogo.png
+👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍Run your app👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
