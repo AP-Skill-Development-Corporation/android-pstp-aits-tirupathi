@@ -39,6 +39,53 @@
 * <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(52).png"> 
 * <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(53).png"> 
 * <img src="https://raw.githubusercontent.com/AP-Skill-Development-Corporation/android-pstp-aits-tirupathi/master/g-sign%20images/Screenshot%20(54).png">  
+## Practical Implimenation code:(android studio ide version 4.1.3 used ) 
+* After creation of new project open the gradle script file(build.gradle (module:app)level
+```XML
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+ 
+    defaultConfig {
+        applicationId "com.example.gsignin_intigration"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    /*below dependaancy for Google Sign*/
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+}
+```
 
     
       
