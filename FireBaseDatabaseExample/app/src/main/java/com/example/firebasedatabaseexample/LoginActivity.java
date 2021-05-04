@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                     if ((ename.equals(emp.getEname())) && (eid.equals(emp.geteId()))){
                         Intent successintent=new Intent(getApplicationContext(),
                                 LoginSuccessActivity.class);
+                        successintent.putExtra("empname",ename);
                         startActivity(successintent);
                         break;
                     }

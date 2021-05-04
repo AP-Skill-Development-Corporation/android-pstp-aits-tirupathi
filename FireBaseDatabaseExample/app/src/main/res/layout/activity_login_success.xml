@@ -4,14 +4,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_gravity="center"
     android:layout_height="wrap_content"
     tools:context=".LoginSuccessActivity">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:src="@drawable/succ"
-    android:id="@+id/iv"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#DC0C0C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/succ" />
 
 </LinearLayout>
