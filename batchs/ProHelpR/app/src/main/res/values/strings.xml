@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ProHelpR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Category">Category</string>
+    <string-array name="Category">
+        <item>Select Your Category</item>
+        <item>Carpentry</item>
+        <item>Masonry</item>
+        <item>Clothing</item>
+        <item>Plumbing</item>
+        <item>Cleaning</item>
+        <item>Electric Works</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Select Your Status</item>
+        <item>Avliable</item>
+        <item>Not Avliable</item>
+    </string-array>
+
+
+    <string-array name="Categories">
+    <item>Carpentry</item>
+    <item>Plumbing</item>
+    <item>MechanicWorks</item>
+    <item>Clothing</item>
+    <item>Masonry</item>
+    <item>ElectricWorks</item>
+    <item>Cleaning</item>
+
+    </string-array>
+
+
+</resources>
