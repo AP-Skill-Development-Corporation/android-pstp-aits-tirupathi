@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.youtubeintigration"
-        minSdkVersion 19
+        applicationId "com.example.mymaps"
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -29,9 +29,10 @@ android {
 }
 
 dependencies {
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
