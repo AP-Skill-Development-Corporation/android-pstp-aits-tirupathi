@@ -10,12 +10,14 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.os.PersistableBundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -27,9 +29,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class user_course extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_course);
 
-LinearLayout linearLayout_course1,frst;
-    CardView[] course=new CardView[4];
+    }
+
+//LinearLayout linearLayout_course1,frst;
+   /* CardView[] course=new CardView[4];
     ProgressBar b1,b2,b3,b4;
     TextView[] t=new TextView[4];
     TextView name;
@@ -39,17 +47,17 @@ LinearLayout linearLayout_course1,frst;
     private AnimationDrawable animationDrawable;
     ImageView logout,profile;
     int[] progress=new int[4];
-
-    @Override
+*/
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+        super.onCreate(savedInstanceState);*/
+/*
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
         setContentView(R.layout.activity_user_course);
-        frst=findViewById(R.id.firstcours);
+        //frst=findViewById(R.id.firstcours);
         frst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,14 +65,14 @@ LinearLayout linearLayout_course1,frst;
                 startActivity(intent);
             }
         });
-        /*linearLayout_course1=findViewById(R.id.linearLayout_c1);
+        *//*linearLayout_course1=findViewById(R.id.linearLayout_c1);
         linearLayout_course1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(user_course.this,CourseOneMateral.class);
                 startActivity(intent);
             }
-        });*/
+        });*//*
         getSupportActionBar().hide();
         final String uid=getIntent().getStringExtra("uid");
         course[0]=findViewById(R.id.course1);
@@ -72,10 +80,10 @@ LinearLayout linearLayout_course1,frst;
         course[2]=findViewById(R.id.course3);
         course[3]=findViewById(R.id.course4);
         name=findViewById(R.id.textView17);
-        b1=findViewById(R.id.progressBar1);
-        b2=findViewById(R.id.progressBar2);
-        b3=findViewById(R.id.progressBar3);
-        b4=findViewById(R.id.progressBar4);
+       // b1=findViewById(R.id.progressBar1);
+        *//*b2=findViewById(R.id.progressBar2);
+        b3=findViewById(R.id.progressBar3);*//*
+      //  b4=findViewById(R.id.progressBar4);
         t[0]=findViewById(R.id.textView1);
         t[1]=findViewById(R.id.textView2);
         t[2]=findViewById(R.id.textView3);
@@ -257,5 +265,12 @@ LinearLayout linearLayout_course1,frst;
         }
 
         mBackPressed = System.currentTimeMillis();
+    }
+
+  */
+
+        public void course_oneActivity(View view) {
+        Intent intent=new Intent(this,CourseOneMateral.class);
+        startActivity(intent);
     }
 }

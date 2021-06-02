@@ -100,7 +100,7 @@ public class signin extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"Login Successful", Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(signin.this,user_course.class);
-                    i.putExtra("uid",userid);
+                   // i.putExtra("uid",userid);
                     startActivity(i);
                 }
                 else

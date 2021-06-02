@@ -13,11 +13,7 @@
         <activity android:name=".MultipleVideosActivity"></activity>
         <activity android:name=".ExoplayerActivity" />
         <activity android:name=".CourseOneMateral">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Pythone_T1" />
         <activity
@@ -84,7 +80,13 @@
         <activity
             android:name=".splash"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden"
