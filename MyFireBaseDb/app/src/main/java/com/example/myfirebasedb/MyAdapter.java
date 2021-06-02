@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    Context ctx;
+    DisplayActivity ctx;
     List<UsersPojoModel> pojoModels;
 
-    public MyAdapter(Context ctx, List<UsersPojoModel> pojoModels) {
+    public MyAdapter(DisplayActivity ctx, List<UsersPojoModel> pojoModels) {
         this.ctx = ctx;
         this.pojoModels = pojoModels;
     }

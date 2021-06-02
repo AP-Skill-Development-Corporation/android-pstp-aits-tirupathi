@@ -2,6 +2,7 @@ package com.example.myfirebasedb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ DatabaseReference reference;
         et_mobile=findViewById(R.id.editText_Mobile);
         et_email=findViewById(R.id.editText_email);
         database=FirebaseDatabase.getInstance();
-        reference=database.getReference();
+        reference=database.getReference("UsersDataBase");
 
 
     }
@@ -35,12 +36,17 @@ DatabaseReference reference;
         String mobile=et_mobile.getText().toString();
         String email=et_email.getText().toString();
         UsersPojoModel pojoModel=new UsersPojoModel(name,aadhar,email,mobile);
-        reference.child("User DB").child(name).push().setValue(pojoModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+        reference.push().setValue(pojoModel).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
             }
         });
 
+    }
+
+    public void retriveDb(View view) {
+        Intent intent=new Intent(this,DisplayActivity.class);
+        startActivity(intent);
     }
 }

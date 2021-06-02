@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firbase World!"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#E91E63"
+        />
+
+    <EditText
+        android:id="@+id/et_stuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the name"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/et_stuMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the email"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/et_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student mobile"
+        android:hint="Enter the mobile"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/et_stuAddres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the address"
+        android:layout_margin="10dp"
+        />
+    <Spinner
+        android:entries="@array/branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spiner_branch"
+        android:layout_margin="10dp"/>
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/male"
+            android:text="Male"
+            android:layout_margin="10dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/female"
+            android:text="FeMale"
+            android:layout_margin="10dp"/>
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:onClick="saveData"
+        android:layout_margin="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrive"
+        android:onClick="retriveData"
+        android:layout_margin="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/recycler"/>
+
+
+</LinearLayout>

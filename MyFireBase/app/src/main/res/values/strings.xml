@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyFireBase</string>
+    <string-array name="branch">
+        <item>select branch</item>
+        <item>Cse</item>
+        <item>Ece</item>
+        <item>EEE</item>
+        <item>mech</item>
+    </string-array>
+</resources>

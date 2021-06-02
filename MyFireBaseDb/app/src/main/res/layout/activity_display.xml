@@ -8,10 +8,24 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec"
-        android:layout_marginTop="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="16dp"
+        android:onClick="retriveData"
+        android:text="retrive"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
